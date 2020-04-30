@@ -24,7 +24,17 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/svg" href="images/icons8-plus-192.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
 
 </head>
 <body>
@@ -40,14 +50,36 @@
     <div class="row">
       <div class="one-half column">
         <h2>iOS Safari</h2>
-        <p> Click on share &gt; Add to Home Screen </p>
+        <p> Click on <b>Share</b> &gt; <b>Add to Home Screen</b> </p>
         <p> Site will get installed on your home screen </p>
       </div>
       <div class="one-half column">
         <h2>Android Chrome</h2>
-        <p> Click on menu &gt; Add to homescreen or use popup banner if it pops up</p> 
+        <p> Click on <b>Menu</b> &gt; <b>Add to homescreen</b> or use popup <b>banner</b> if it pops up</p> 
         <p> Site will get installed on your home screen </p>
+        <div style="display:flex;flex-wrap: wrap;">
+          <div style="margin-right: 3px;">
+            <h4>Menu</h4>
+            <video autoplay loop muted playsinline>
+              <source src="video/airhorner-clicks-menu.webm" type="video/webm">
+              <!--<source src="oneDoesNotSimply.mp4" type="video/mp4">-->
+            </video>
+          </div>
+          <div style="margin-right: 3px;">
+            <h4>Banner<h4/>
+                <video autoplay loop muted playsinline>
+                  <source src="video/airhorner-clicks-banner.webm" type="video/webm">
+                  <!--<source src="oneDoesNotSimply.mp4" type="video/mp4">-->
+                </video>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="row">
+      Created by <a href="https://twitter.com/_pomali">pom</a>
+    </div>
+    <div class="row">
+      <a target="_blank" rel="noopener noreferrer" href="https://icons8.com/icons/set/plus">Plus icon</a> icon by <a target="_blank" rel="noopener noreferrer" href="https://icons8.com">Icons8</a>
     </div>
   </div>
 
